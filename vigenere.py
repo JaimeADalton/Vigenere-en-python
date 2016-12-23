@@ -4,16 +4,16 @@
 #
 
 alfa = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890|@#~{[]}\!"$%&/()=?^*_:;,.-+`<> '
-def vigenere(texto,clave):
+def vigenere(texto, clave):
     cifrado = ''
-    for letra in range(len(texto)):
-        cifrado += alfa[(alfa.index(texto[letra])+alfa.index(clave[letra%len(clave)]))%len(alfa)]
+    for letra in range( len(texto) ):
+        cifrado += alfa[( alfa.index( texto[letra] ) + alfa.index( clave[letra % len(clave)] )) % len(alfa)]
     return cifrado
 
 def des_vigenere(texto_encriptado,clave):
     texto = ''
     for letra in range(len(texto_encriptado)):
-        texto += alfa[(alfa.index(texto_encriptado[letra])-alfa.index(clave[letra%len(clave)]))%len(alfa)]
+        texto += alfa[( alfa.index( texto_encriptado[letra] ) - alfa.index( clave[letra % len(clave)] )) % len(alfa)]
     return texto
     
 def main():
