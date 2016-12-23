@@ -17,13 +17,13 @@ def des_vigenere(texto_encriptado,clave):
     return texto
     
 def main():
-    c = str(raw_input("Introduce cadena a cifrar: ")).lower()    # PARA QUE SIEMPRE LA CONVIERTA A MINUSCULA
-    clave = str(raw_input("Introduce clave: ")).lower() 
+    c = str(raw_input("Introduce cadena a cifrar: "))
+    clave = str(raw_input("Introduce clave: "))
     print vigenere(c, clave)
     print
 
-    c = str(raw_input("Introduce cadena a descifrar: ")).lower()    # PARA QUE SIEMPRE LA CONVIERTA A MINUSCULA
-    clave = str(raw_input("Introduce clave: ")).lower()
+    c = str(raw_input("Introduce cadena a descifrar: "))
+    clave = str(raw_input("Introduce clave: "))
     print des_vigenere(c, clave) 
     print
 
